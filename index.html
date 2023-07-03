@@ -32,9 +32,15 @@
             background: #5a5a5a; 
             }
         </style>
-
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- custom style -->
+        <style>
+            .bulat-1{
+                border-radius: 15px 15px 15px 15px;
+                /* border-radius: 20%; */
+            }
+        </style>
     </head>
     <body class="w3-content" style="max-width:1200px">
 
@@ -45,19 +51,16 @@
                 <h3 class="w3-wide"><b>Alfarisi<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Store</br></h3>
             </div>
             <div class="py-2 w3-large w3-text-grey" style="font-weight:bold">
-                <a href="#" class="w3-bar-item w3-button">Shirts</a>
-                <a href="#" class="w3-bar-item w3-button">Dresses</a>
-                <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">Jeans <i class="fa fa-caret-down"></i></a>
+                <a href="#bros" class="py-2 w3-bar-item w3-button">Bros</a>
+                <a href="#bando" class="py-2 w3-bar-item w3-button">Headband/Bando</a>
+                <a href="#konektor_masker" class="py-2 w3-bar-item w3-button">Konektor Masker Anak</a>
+                <a onclick="myAccFunc()" href="javascript:void(0)" class="py-2 w3-bar-item w3-button w3-left-align" id="myBtn">Tali Masker Anak &nbsp;<i class="fa fa-caret-down"></i></a>
                 <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-                    <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-                    <a href="#" class="w3-bar-item w3-button">Relaxed</a>
-                    <a href="#" class="w3-bar-item w3-button">Bootcut</a>
-                    <a href="#" class="w3-bar-item w3-button">Straight</a>
+                    <a href="#tali_masker_laki" class="w3-bar-item w3-button">Laki-Laki</a>
+                    <a href="#tali_masker_perempuan" class="w3-bar-item w3-button">Perempuan</a>
                 </div>
-                <a href="#" class="w3-bar-item w3-button">Jackets</a>
-                <a href="#" class="w3-bar-item w3-button">Gymwear</a>
-                <a href="#" class="w3-bar-item w3-button">Blazers</a>
-                <a href="#" class="w3-bar-item w3-button">Shoes</a>
+                <a href="#tali_masker_nama" class="py-2 w3-bar-item w3-button">Tali Masker Custom Nama</a>
+                <a href="#tali_masker_dewasa" class="py-2 w3-bar-item w3-button">Tali Masker Dewasa</a>
             </div>
             <br><br>
             <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
@@ -76,35 +79,46 @@
         <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
         <!-- halaman konten/isi -->
-        <div class="w3-main" style="margin-left:250px">
+        <div class="w3-main" style="margin-left:250px;">
 
             <!-- Push down content on small screens -->
             <div class="w3-hide-large" style="margin-top:83px"></div>
             
             <!-- Top header -->
-            <header class="w3-container w3-xlarge mb-2">
-                <p class="w3-left"></p>
-                <p class="w3-right">
-                    <i class="fa fa-shopping-cart w3-margin-right"></i>
-                    <i class="fa fa-search"></i>
-                </p>
+            <header class="w3-container w3-xlarge d-none d-lg-block mb-4" style="background-color: black;">
+                <div class="row py-4">
+                    <div class="col-6">
+                        <form action="">
+                            <div class="d-flex col-10">
+                                <input type="text" class="form-control" placeholder="Cari">
+                                <a href="#" class="btn btn-secondary ml-n1"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end col-6">
+                        <div class="text-white d-flex justify-content-end">
+                            <i class="fa fa-shopping-cart px-4"></i>
+                        </div>
+                    </div>
+                </div>
             </header>
 
             <!-- gambar benner/ gambar besar layar awal -->
+            <div class="d-lg-none" style="height: 30px;"></div>
             <div class="w3-display-container w3-container">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://wallpaperstock.net/wallpapers/thumbs1/41395wide.jpg" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="https://wallpaperaccess.com/full/1732284.jpg" alt="Second slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block w-100" src="https://c4.wallpaperflare.com/wallpaper/733/1023/808/mac-os-x-os-x-mountains-mist-wallpaper-preview.jpg" alt="Third slide">
-                      </div>
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://wallpaperstock.net/wallpapers/thumbs1/41395wide.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://wallpaperaccess.com/full/1732284.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://c4.wallpaperflare.com/wallpaper/733/1023/808/mac-os-x-os-x-mountains-mist-wallpaper-preview.jpg" alt="Third slide">
+                        </div>
                     </div>
-                  </div>
+                </div> 
                 
                 <div class="w3-display-topleft w3-text-white ml-5 h-100 d-flex align-items-center">
                     <div>
@@ -112,93 +126,1047 @@
                         <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
                         <h1 class="w3-hide-small">COLLECTION 2016</h1>
 
-                        <!-- tombol whatsapp -->
                         <h4 style="width: 180px;">
                             <a href="https://wa.me/6285749251081" target="_blank" class="btn btn-success d-flex align-items-center">
                                 <i class="fa fa-whatsapp fa-2x"></i>&nbsp;&nbsp;<b>Pesan Sekarang</b>
                             </a>
                         </h4>
                     </div>
-                </div>
-
-                
+                </div> 
             </div>
+            <br>
 
-            <div class="w3-container w3-text-grey" id="jeans">
-            <p>8 items</p>
-            </div>
+            <div class="container">
 
-            <!-- gambar produk -->
-            <div class="w3-row">
-                <!-- gambar kolom 1 -->
-                <div class="w3-col l3 s6">
-                    <div class="w3-container">
-                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//96/MTA-24593532/oem_oem_full01.jpg" style="width:100%">
-                        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-                    </div>
-                    <div class="w3-container">
-                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//107/MTA-66738626/tidak_ada_merk_bulu_ayam_turkey_accessories_dream_catcher_home_decor_chicken_feather_fashion_headdress_carnival_halloween_diy_handcraft_full02_cyzb1o45.jpg" style="width:100%">
-                        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-                    </div>
+                <!-- produk bros -->
+                <div id="bros" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>BROS</b>
+                    </h5>
                 </div>
-
-                <!-- gambar kolom 2 -->
-                <div class="w3-col l3 s6">
-                    <div class="w3-container">
-                        <div class="w3-display-container">
-                            <img src="https://images.tokopedia.net/img/cache/500-square/product-1/2020/4/19/2641403/2641403_31a8a218-a10b-497c-b226-42840f54f9f0_780_780.jpg" style="width:100%">
-                            <span class="w3-tag w3-display-topleft">New</span>
-                            <div class="w3-display-middle w3-display-hover">
-                                <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                <div class="row">
+                    <!-- bros 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/1b11769c7d9cb1ea6b0ba52678d23dd4_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bros bunga handmade<br><b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bros-bunga-handmade-i.660766586.17312470801?sp_atk=5dfbb708-e22a-49c3-afda-5ff96aa9d0a8&xptdk=5dfbb708-e22a-49c3-afda-5ff96aa9d0a8" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
                     </div>
-                    <div class="w3-container">
-                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//96/MTA-24593532/oem_oem_full01.jpg" style="width:100%">
-                        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-                    </div>
-                </div>
-
-                <!-- gambar kolom 3 -->
-                <div class="w3-col l3 s6">
-                    <div class="w3-container">
-                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//107/MTA-66738626/tidak_ada_merk_bulu_ayam_turkey_accessories_dream_catcher_home_decor_chicken_feather_fashion_headdress_carnival_halloween_diy_handcraft_full02_cyzb1o45.jpg" style="width:100%">
-                        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-                    </div>
-                    <div class="w3-container">
-                        <div class="w3-display-container">
-                            <img src="https://images.tokopedia.net/img/cache/500-square/product-1/2020/4/19/2641403/2641403_31a8a218-a10b-497c-b226-42840f54f9f0_780_780.jpg" style="width:100%">
-                            <span class="w3-tag w3-display-topleft">Sale</span>
-                            <div class="w3-display-middle w3-display-hover">
-                                <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                    <!-- bros 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/e536905e82becc26b45cd38aaed0b76f_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bros hijab custom nama/ Bros hijab ema<br><b class="text-danger">Rp. 120.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bros-Hijab-custom-nama-Bros-Hijab-ema-i.660766586.21833232849?sp_atk=7d2cb1f5-2609-4008-8c56-e23bb299bec1&xptdk=7d2cb1f5-2609-4008-8c56-e23bb299bec1" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
                     </div>
-                </div>
+                    <!-- bros 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/3f6c5b1b1f9b00ed4274583e07990c38_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bros dagu kelopak bunga<br><b class="text-danger">Rp. 16.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bros-dagu-tiga-kelopak-bros-dagu-bunga-bros-dagu-kekinian-i.660766586.21125949465?sp_atk=d94c3b30-4d3f-4b76-aa0b-e14ca232d5c0&xptdk=d94c3b30-4d3f-4b76-aa0b-e14ca232d5c0" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bros 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22090-3vpyfxyzaxhve1_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bros dada bunga<br><b class="text-danger">Rp. 12.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bros-dada-bunga-i.660766586.21849492773?sp_atk=d3f71eec-aafc-4f25-ae4f-e91c6c11b584&xptdk=d3f71eec-aafc-4f25-ae4f-e91c6c11b584" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bros 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22090-nfm5nm8gm2hv64_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Paket couple ibu & anak/ Baby Headband / Bros Jepit Rambut<br><b class="text-danger">Rp. 13.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Paket-Couple-Ibu-dan-Anak-Paket-Couple-Baby-Headband-Bros-Jepit-Rambut-i.660766586.20950506909?sp_atk=7ef8e16b-33ac-470f-b445-96e147de55f4&xptdk=7ef8e16b-33ac-470f-b445-96e147de55f4" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bros 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/febb63beb2e6872833c2406ec6892f6d_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bros bunga handmade<br><b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bros-bunga-handmade-i.660766586.16605443831?sp_atk=b1b5149d-a5d6-4997-8b93-d335bd50d93f&xptdk=b1b5149d-a5d6-4997-8b93-d335bd50d93f" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
 
-                <!-- gambar kolom 4 -->
-                <div class="w3-col l3 s6">
-                    <div class="w3-container">
-                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//96/MTA-24593532/oem_oem_full01.jpg" style="width:100%">
-                        <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
-                    </div>
-                    <div class="w3-container">
-                        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//107/MTA-66738626/tidak_ada_merk_bulu_ayam_turkey_accessories_dream_catcher_home_decor_chicken_feather_fashion_headdress_carnival_halloween_diy_handcraft_full02_cyzb1o45.jpg" style="width:100%">
-                        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Subscribe section -->
-            <!-- <div class="w3-container w3-black w3-padding-32">
-                <h1>Subscribe</h1>
-                <p>To get special offers and VIP treatment:</p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-                <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
-            </div> -->
-            
+                <!-- produk bando -->
+                <div id="bando" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>HEADBAND/BANDO</b>
+                    </h5>
+                </div>
+                <div class="row">
+                    <!-- bando 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/c492e82c7e8c545218fcb6c7aa1b1734" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        headband bulu/bando bulu/hiasan kepala bulu<br>
+                                        <s>Rp. 15.000</s>&nbsp;<b class="text-danger">Rp. 13.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/READY-headband-bulu-bando-bulu-hiasan-kepala-bulu-i.660766586.18727316949?sp_atk=9fbd58dc-7726-49dd-91bd-6f0468a528f0&xptdk=9fbd58dc-7726-49dd-91bd-6f0468a528f0" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/96f3b403113a5db8fec325ceb40771d8" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        bando bulu/ hiasan kepala bulu/ headband bulu<br>
+                                        <s>Rp. 15.000</s>&nbsp;<b class="text-danger">Rp. 13.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/bando-bulu-hiasan-kepala-bulu-headband-bulu-i.660766586.19638233602?sp_atk=a0dc9596-0817-4476-93d5-c42bcf89ad27&xptdk=a0dc9596-0817-4476-93d5-c42bcf89ad27" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/591d6376543091eefc553142ba98cc61" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bando bulu/headband bulu/hiasan kepala bulu<br>
+                                        <s>Rp. 15.000</s>&nbsp;<b class="text-danger">Rp. 13.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bando-bulu-headband-bulu-hiasan-kepala-bulu-i.660766586.20726754143?sp_atk=90f3d48f-0a73-4ba7-aa71-da641900cb58&xptdk=90f3d48f-0a73-4ba7-aa71-da641900cb58" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22090-ud3hivmb0whv31" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Hiasan kepala bulu/headband bulu/bando bulu/bandana bulu<br>
+                                        <s>Rp. 20.000</s>&nbsp;<b class="text-danger">Rp. 18.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Hiasan-kepala-bulu-headband-bulu-bando-bulu-bandana-bulu-(-READY)-i.660766586.19734539324?sp_atk=a9becf82-d8da-4029-b2bc-87e6d1bede6f&xptdk=a9becf82-d8da-4029-b2bc-87e6d1bede6f" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/0cdc1e930235d65251a7c3c2860a37fd" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bando bulu/headband bulu/hiasan kepala bulu<br>
+                                        <s>Rp. 20.000</s>&nbsp;<b class="text-danger">Rp. 18.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bando-bulu-headband-bulu-hiasan-kepala-bulu-i.660766586.21041538448?sp_atk=a6653aa3-9f72-4a77-955a-8da7890c8cca&xptdk=a6653aa3-9f72-4a77-955a-8da7890c8cca" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/b0d1337b1f59ad048f03a9af2f1f354a" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Bando bulu/ headband bulu/hiasan kepala bulu<br>
+                                        <s>Rp. 24.000</s>&nbsp;<b class="text-danger">Rp. 22.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Bando-bulu-headband-bulu-hiasan-kepala-bulu-i.660766586.20241540352?sp_atk=d708c5ec-7a2b-4314-96ae-bf1c1c18bf6b&xptdk=d708c5ec-7a2b-4314-96ae-bf1c1c18bf6b" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/02067b9a5cde6a46b0e16c17d9800e77" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Baby Headband / Bando bayi<br>
+                                        <b class="text-danger">Rp. 22.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Baby-Headband-Bando-bayi-i.660766586.20550505593?sp_atk=bdde6dbc-00d0-4693-b225-714128e4a6f0&xptdk=bdde6dbc-00d0-4693-b225-714128e4a6f0" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22090-wp4ab35mbxhvef" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Baby headband/ bando bayi<br>
+                                        <b class="text-danger">Rp. 26.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Baby-headband-bando-bayi-i.660766586.21149493268?sp_atk=e76d1899-2bd0-478d-851d-f851da82fa56&xptdk=e76d1899-2bd0-478d-851d-f851da82fa56" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 9 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22090-b77ctulsbxhv37" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Baby Headband / Bando Bayi<br>
+                                        <b class="text-danger">Rp. 27.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Baby-Headband-Bando-Bayi-i.660766586.18749495355?sp_atk=d6475f7c-4b36-4782-9c39-065c0679fa61&xptdk=d6475f7c-4b36-4782-9c39-065c0679fa61" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bando 10 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-22090-nfm5nm8gm2hv64" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        Paket Couple Ibu dan Anak / Paket Couple Baby Headband / Bros / Jepit Rambut<br>
+                                        <b class="text-danger">Rp. 13.000-36.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/Paket-Couple-Ibu-dan-Anak-Paket-Couple-Baby-Headband-Bros-Jepit-Rambut-i.660766586.20950506909?sp_atk=1e9dab27-8a8f-4b30-a59f-3fd530ad96ea&xptdk=1e9dab27-8a8f-4b30-a59f-3fd530ad96ea" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+
+                <!-- produk konektor masker anak -->
+                <div id="konektor_masker" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>KONEKTOR MASKER ANAK</b>
+                    </h5>
+                </div>
+                <div class="row">
+                    <!-- konektor 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/13ddab611c2a86f023d3515d9efcfc3e" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        konektor masker anak lucu/gambar putri<br>
+                                        <b class="text-danger">Rp. 12.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/konektor-masker-anak-lucu-gambar-putri-i.660766586.14041663996?sp_atk=74d6dcd3-5a34-41b2-84aa-b40456847d27&xptdk=74d6dcd3-5a34-41b2-84aa-b40456847d27" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- konektor 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/61a3ee2be1bccbb06d7904e45e16bfba" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        konektor masker anak lucu gambar putri kuning<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/konektor-masker-anak-lucu-gambar-putri-kuning-i.660766586.14041667148?sp_atk=783f71fb-e39c-4e20-aed0-4ece6df0a06d&xptdk=783f71fb-e39c-4e20-aed0-4ece6df0a06d" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- konektor 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/2811037161bc3f250074f762b4dbd2db" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        konektor masker anak lucu gambar putri biru<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/konektor-masker-anak-lucu-gambar-putri-biru-i.660766586.12071723260?sp_atk=2cf1e2aa-e956-4f3c-8d54-1581f5309141" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+
+                <!-- produk tali masker anak laki -->
+                <div id="tali_masker_laki" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>TALI MASKER ANAK LAKI-LAKI</b>
+                    </h5>
+                </div>
+                <div class="row">
+                    <!-- tali masker anak laki 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/7dda4958961078fc2efe46538ad0179c_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap anak laki2<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-anak-laki2-i.660766586.15647985047?sp_atk=b87fa4d4-b2f3-4584-8249-143bb5a884f7&xptdk=b87fa4d4-b2f3-4584-8249-143bb5a884f7" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak laki 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/7dda4958961078fc2efe46538ad0179c" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        kalung masker/tali masker anak laki2 superhero<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/kalung-masker-tali-masker-anak-laki2-superhero-i.660766586.12774350735?sp_atk=e3976ce1-2656-403a-a2ad-37c6d0df6069" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+
+                <!-- produk tali masker anak perempuan -->
+                <div id="tali_masker_perempuan" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>TALI MASKER ANAK PEREMPUAN</b>
+                    </h5>
+                </div>
+                <div class="row">
+                    <!-- tali masker anak perempuan 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/7e419036145453711b8e1690b7fee25b" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        kalung masker anak lucu<br>
+                                        <b class="text-danger">Rp. 12.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/kalung-masker-anak-lucu-i.660766586.13972274786?sp_atk=47581b60-2dec-43f5-9440-fcb756773650&xptdk=47581b60-2dec-43f5-9440-fcb756773650" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/1b4e2efeb9cf92e1d3c74a4dd6a4afcc" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        simple strap mask 2 in 1<br>
+                                        <b class="text-danger">Rp. 8.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/simple-strap-mask-2-in-1-i.660766586.15150023755?sp_atk=0f50b702-3f2e-4402-a16c-ff4dd57fc054&xptdk=0f50b702-3f2e-4402-a16c-ff4dd57fc054" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/7ad25b362e76e4e4501aa4b976ea704a" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        kalung masker anak lucu<br>
+                                        <b class="text-danger">Rp. 12.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/kalung-masker-anak-lucu-i.660766586.14442859241?sp_atk=10a7bab1-ebc4-44b8-826e-b064de94f75a&xptdk=10a7bab1-ebc4-44b8-826e-b064de94f75a" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/a499fd0f92a8a917c2e14eab7cbd1493" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask 2 in 1 kalung masker anak lucu<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-2-in-1-kalung-masker-anak-lulcu-i.660766586.14350027898?sp_atk=8b3d2818-dbbe-427d-8d50-1cea8da12142&xptdk=8b3d2818-dbbe-427d-8d50-1cea8da12142" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/755e2308e5dbbec3590888bf61bf44d6" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask anak nama custom<br>
+                                        <b class="text-danger">Rp. 15.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-anak-nama-custom-i.660766586.15747988538?sp_atk=18568022-b5a5-498b-95d2-1187af529af7&xptdk=18568022-b5a5-498b-95d2-1187af529af7" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/e052cfd521754613a9d5d23cec23ce32" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        kalung masker anak nama<br>
+                                        <b class="text-danger">Rp. 16.900</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/kalung-masker-anak-nama-i.660766586.15642855125?sp_atk=59c83ebe-25e0-481c-8320-a8ff5c622a6a&xptdk=59c83ebe-25e0-481c-8320-a8ff5c622a6a" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/837ded14779a640a0dfd388d8b5ffc96" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/kalung masker oreo lucu<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-oreo-lucu-i.660766586.16000524488?sp_atk=f3360ff6-61f9-4dd0-9ec0-945987b0519a" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/7ba5232c386bd2b602d1c36c265bca4d" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/kalung masker anak<br>
+                                        <b class="text-danger">Rp. 9.900</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-anak-i.660766586.14041692851?sp_atk=a9cb7270-e8b4-4128-9c4b-8cf553ff8663" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker anak perempuan 9 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/621c29eee0e0154cc0f89f376f7b5475" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask anak bt21<br>
+                                        <b class="text-danger">Rp. 13.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-anak-bt21-i.660766586.12272291621?sp_atk=406ad168-9ea1-42ef-afd9-55e10724ef3b" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+
+                <!-- produk tali masker custom nama -->
+                <div id="tali_masker_nama" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>TALI MASKER CUSTOM NAMA</b>
+                    </h5>
+                </div>
+                <div class="row">
+                    <!-- tali masker custom nama 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/755e2308e5dbbec3590888bf61bf44d6" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask anak nama custom<br>
+                                        <b class="text-danger">Rp. 15.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-anak-nama-custom-i.660766586.15747988538?sp_atk=598aa482-14bd-422e-9633-61394bf68050&xptdk=598aa482-14bd-422e-9633-61394bf68050" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker custom nama 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/e052cfd521754613a9d5d23cec23ce32" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        kalung masker anak nama<br>
+                                        <b class="text-danger">Rp. 16.900</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/kalung-masker-anak-nama-i.660766586.15642855125?sp_atk=0ae39eab-258c-40fe-8230-f03d96b9d3e5&xptdk=0ae39eab-258c-40fe-8230-f03d96b9d3e5" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+
+                <!-- produk tali masker dewasa -->
+                <div id="tali_masker_dewasa" class="py-3"></div>
+                <div class="w3-container w3-text-grey">
+                    <h5 class="text-dark">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <b>TALI MASKER DEWASA</b>
+                    </h5>
+                </div>
+                <div class="row">
+                    <!-- tali masker dewasa 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/1b4e2efeb9cf92e1d3c74a4dd6a4afcc" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        simple strap mask 2 in 1<br>
+                                        <b class="text-danger">Rp. 8.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/simple-strap-mask-2-in-1-i.660766586.15150023755?sp_atk=68245b01-0b9e-4475-b6aa-2e6204b87423&xptdk=68245b01-0b9e-4475-b6aa-2e6204b87423" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/a499fd0f92a8a917c2e14eab7cbd1493" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask 2 in 1 kalung masker anak lucu<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-2-in-1-kalung-masker-anak-lulcu-i.660766586.14350027898?sp_atk=36792e5e-b07e-415c-b756-92d9af756efb&xptdk=36792e5e-b07e-415c-b756-92d9af756efb" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/73d74faf08c24aac6591f87064415364" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask dewasa 2 in 1 batu kristal/ceko/premium<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-dewasa-2-in-1-batu-kristal-ceko-premium-i.660766586.15248652556?sp_atk=9c85ae9a-1c26-4c1d-8ca4-05036a1481d3&xptdk=9c85ae9a-1c26-4c1d-8ca4-05036a1481d3" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/8d5607415067b70364eb2de9cab5310b" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask dewasa kelopak bunga<br>
+                                        <b class="text-danger">Rp. 15.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-dewasa-kelopak-bunga-i.660766586.14248047304?sp_atk=390d066b-9ce9-4562-99c9-8144a76c2a6b&xptdk=390d066b-9ce9-4562-99c9-8144a76c2a6b" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/836c4d15b5ef7d3617abaedc4e7de374" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/ kalung masker dewasa 2 in 1 kelopak premium<br>
+                                        <b class="text-danger">Rp. 18.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-dewasa-2-in-1-kelopak-premium-i.660766586.12875093917?sp_atk=cb73a7f1-2a6d-4b7f-8cf4-5089ba63c694&xptdk=cb73a7f1-2a6d-4b7f-8cf4-5089ba63c694" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/4bd20964fa461572f60206b9a8c4af7a" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask 2 in 1 dewasa<br>
+                                        <b class="text-danger">Rp. 15.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-2-in-1-dewasa-i.660766586.13372270827?sp_atk=bfacdc72-44fb-43b8-8538-9615fe9d5254&xptdk=bfacdc72-44fb-43b8-8538-9615fe9d5254" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/01bb65775600655e5b9415c83bf0a261" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask dewasa 2 in 1<br>
+                                        <b class="text-danger">Rp. 13.800</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-dewasa-2-in-1-i.660766586.14042847678?sp_atk=739308b9-184b-4205-88ec-972b813a8208&xptdk=739308b9-184b-4205-88ec-972b813a8208" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/b225aa37a6b92b256666e1f1b8a676c1" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask dewasa 2 in 1<br>
+                                        <b class="text-danger">Rp. 11.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-dewasa-2-in-1-i.660766586.13372277950?sp_atk=124fe519-c5ee-49e7-a27a-df33a5ceca72&xptdk=124fe519-c5ee-49e7-a27a-df33a5ceca72" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 9 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/14a33291b3e82d4fa6a9b4297d037dc8" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask 2 in 1 dewasa kuning<br>
+                                        <b class="text-danger">Rp. 9.900</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-2-in-1-dewasa-kuning-i.660766586.9698163708?sp_atk=42f15514-cbc3-496a-ad05-2563b8ea7340&xptdk=42f15514-cbc3-496a-ad05-2563b8ea7340" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 10 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/010f91f65b86b79573ac3c57f1d79927" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/kalung masker 2 in 1 batu pecah/premium<br>
+                                        <b class="text-danger">Rp. 12.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-2-in-1-batu-pecah-premium-i.660766586.12875091699?sp_atk=9194f966-00f8-45ff-a536-a7642a29e259&xptdk=9194f966-00f8-45ff-a536-a7642a29e259" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 11 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/5fb5df907b1c51650896a6fa1d4348b3" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        konektor masker bunga korea premium<br>
+                                        <b class="text-danger">Rp. 17.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/konektor-masker-bunga-korea-premium-i.660766586.13976422802?sp_atk=2be70bc8-575f-493d-a8cd-f95a59c4a79c&xptdk=2be70bc8-575f-493d-a8cd-f95a59c4a79c" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 12 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/fdf92a9177b1e301bc5192217116d404" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/kalung masker 2 in 1 kelopak<br>
+                                        <b class="text-danger">Rp. 15.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-2-in-1-kelopak-i.660766586.15251443077?sp_atk=6886ad22-499f-4613-80e1-0eb0dd3c337b&xptdk=6886ad22-499f-4613-80e1-0eb0dd3c337b" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 13 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/dcb3354fddf1ea1aadf92017710318f5_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strapmask/kalung masker mutiara 2 in 1<br>
+                                        <b class="text-danger">Rp. 15.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strapmask-kalung-masker-mutiara-2-in-1-i.660766586.12775091603?sp_atk=c00847c0-a4e0-40f3-8a2d-83fc194c1c76&xptdk=c00847c0-a4e0-40f3-8a2d-83fc194c1c76" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 14 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/837ded14779a640a0dfd388d8b5ffc96_tn" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/kalung masker oreo lucu<br>
+                                        <b class="text-danger">Rp. 10.000</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-oreo-lucu-i.660766586.16000524488?sp_atk=2c6ac8b9-9de0-451a-8f0a-e2d9ea27399a" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 15 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/5a47d1331aea8f46c296e87d37d42629" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask 2 in 1 dewasa<br>
+                                        <b class="text-danger">Rp. 11.800</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-2-in-1-dewasa-i.660766586.15942845825?sp_atk=9ac6ebd0-0a33-402d-b7ae-78a11d1e1712" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 16 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/9b1f84fb1867374c78da9eb9dc123c1a" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask dewasa<br>
+                                        <b class="text-danger">Rp. 12.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-dewasa-i.660766586.15742862428?sp_atk=2ff1954a-0809-4f0f-8dab-5f3df477125d" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 17 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/e1f926e9a06e632fff4c204778b07fa3" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask/kalung masker anak 2 in 1 bt21<br>
+                                        <b class="text-danger">Rp. 13.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-kalung-masker-anak-2-in-1-bt21-i.660766586.13572274458?sp_atk=34eb031a-88e1-4961-921f-fc9bee081c06" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tali masker dewasa 18 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12 py-3">
+                        <div class="card h-100 shadow bulat-1">
+                            <div class="card-body">
+                                <div class="w3-display-container">
+                                    <img src="https://down-id.img.susercontent.com/file/f3823db5eedf3075e57be231bd9c284e" style="width:100%">
+                                    <p class="card-text text-center mt-2">
+                                        strap mask dewasa<br>
+                                        <b class="text-danger">Rp. 12.500</b>
+                                    </p>
+                                    <div class="w3-display-middle w3-display-hover">
+                                        <a target="_blank" href="https://shopee.co.id/strap-mask-dewasa-i.660766586.10884353067?sp_atk=d1d434e6-d017-4a4c-96ac-929eaba4815c" class="w3-button w3-black">
+                                            Buy now <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+
+            </div> <!-- tutup container -->
+
             <!-- Footer -->
             <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
                 <div class="w3-row-padding">
